@@ -15,13 +15,13 @@ function joueCoupAleatoire() {
 function round(J1,PC) {
     switch (J1) {
         case "Pierre":
-            if(PC=="Feuille"){hasWon = true};
-            break;
-        case "Feuille":
             if(PC=="Ciseaux"){hasWon = true};
             break;
-        case "Ciseaux":
+        case "Feuille":
             if(PC=="Pierre"){hasWon = true};
+            break;
+        case "Ciseaux":
+            if(PC=="Feuille"){hasWon = true};
             break;
         default:
             break;
