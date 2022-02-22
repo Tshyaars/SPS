@@ -1,8 +1,52 @@
-/* div.score{
-    height: 200px;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+div.jeu{
+    height: calc(100vh - 150px);
+}
+div.coupJoues{
+    display: grid;
+    grid-template: repeat(2,1fr)/1fr;
+    gap: 25px;
+    padding: 50px;
+    text-align: center;
+}
+div.coupJoues p{
+    font-size: 1.5em;
+}
+div.player{
+    height: 50px;
+    display: grid;
+    grid-template: 1fr/repeat(3,1fr);
+    gap: 20px;
+    padding: 20px;
+}
+div.vide{
+    height: calc(100vh - 500px );
+    text-align: center;
+}
+input[value="Rejouer"]{
+    margin: 0px auto 50px;
+    display: block;
+}
+input[value="Rejouer"].hidden{
+    display: none;
+}
+input{
+    border-radius: 10px;
+    padding: 10px;
+    background-color: rgb(179, 179, 179);
+}
+div.score{
+    height: 150px;
+    display: grid;
+    grid-template:1fr/repeat(2,1fr);
 }
 div.score p{
-    line-height: 200px;
-    width: 40%;
+    text-align: center;
+    line-height: 150px;
+    font-size: 50px;
     display: block;
-} */
+}

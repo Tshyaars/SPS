@@ -8,13 +8,20 @@
     <title>Pierre Feuille Ciseaux</title>
 </head>
 <body>
-    <div class="coupJoues">
-        <p>PC : <span class="coupPC">Thinking..</span></p>
-        <p>J1 : <span class="coupJ1">Thinking..</span></p>
+    <div class="jeu">
+        <div class="coupJoues">
+            <p>PC : <span class="coupPC">Thinking..</span></p>
+            <p>J1 : <span class="coupJ1">Thinking..</span></p>
+        </div>
+        <div class="vide">
+        </div>
+        <input type="button" value="Rejouer" class="replay hidden">
+        <div class="player">
+            <input type="button" value="Pierre">
+            <input type="button" value="Feuille">
+            <input type="button" value="Ciseaux">
+        </div>
     </div>
-    <input type="button" value="Pierre">
-    <input type="button" value="Feuille">
-    <input type="button" value="Ciseaux">
     <div class="score">
         <p>J1 : <span id="J1">0</span></p>
         <p>PC : <span id="PC">0</span></p>
