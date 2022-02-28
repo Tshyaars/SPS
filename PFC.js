@@ -4,7 +4,7 @@ const C = "Ciseaux";
 const coups = [P,F,C];
 const coupPC = document.querySelector('.coupPC');
 const coupJ1 = document.querySelector('.coupJ1');
-const actions = document.querySelectorAll('input');
+const actions = document.querySelectorAll('.inputsJ1');
 const scorePC = document.querySelector('#PC');
 const scoreJ1 = document.querySelector('#J1');
 const msgs = document.querySelector(".vide");
@@ -32,19 +32,19 @@ function round(J1,PC) {
 function checkIfWin() {
     if (scoreJ1.innerHTML == 3 || scorePC.innerHTML == 3) {
         hasWon=true;
-        msgs.innerText = scoreJ1.innerHTML == 3 ? "J1" : "PC" + " sort vainqueur de cette partie !";
+        msgs.innerText = (scoreJ1.innerHTML == 3 ? "J1" : "PC") + " sort vainqueur de cette partie !";
         rejouer.classList.remove("hidden");
-        rejouer.addEventListener("click",()=>{
-            scoreJ1.innerHTML = 0;
-            scorePC.innerHTML = 0;
-            hasWon = false;
-            msgs.innerText="";
-            coupJ1.innerText = "Thinking...";
-            coupPC.innerText = "Thinking...";
-            rejouer.classList.add("hidden");
-        });
     }
 }
+rejouer.addEventListener("click",()=>{
+    scoreJ1.innerHTML = 0;
+    scorePC.innerHTML = 0;
+    hasWon = false;
+    msgs.innerText="";
+    coupJ1.innerText = "Thinking...";
+    coupPC.innerText = "Thinking...";
+    rejouer.classList.add("hidden");
+});
 actions.forEach(action => {
     action.addEventListener("click", ()=>{
         if (!hasWon) {
